@@ -66,7 +66,7 @@ with col3:
 with col4:
     st.metric(f"📌 Latest ({df['Year'].dt.year.max()})", f"{df['Inflation_Rate'].iloc[-1]:.1f}%")
 
-# Historical Chart
+# Historical Chart with Events
 st.subheader("📊 Historical Inflation Trend")
 
 fig1, ax = plt.subplots(figsize=(14, 5))
@@ -77,9 +77,8 @@ ax.set_ylabel("Inflation Rate (%)")
 ax.set_title("Kenya Inflation Rate (1980-2024)", fontsize=14, fontweight='bold')
 ax.legend()
 ax.grid(True, alpha=0.3)
-st.pyplot(fig1)
 
-# EVENTS
+#  event annotations BEFORE showing the plot
 events = {
     1993: "Hyperinflation\n(45.98%) - Political transition",
     2008: "Global Financial Crisis\n+ Post-election violence",
@@ -93,12 +92,16 @@ for year, label in events.items():
     y_value = df[df['Year'].dt.year == year]['Inflation_Rate'].values
     if len(y_value) > 0:
         ax.annotate(label, xy=(year, y_value[0]), 
-                   xytext=(year, y_value[0] + 5),
-                   arrowprops=dict(facecolor='red', shrink=0.05, width=1),
-                   fontsize=8, ha='center')
-# ============================================================================
+                   xytext=(year, y_value[0] + 8),  # Increased offset for better visibility
+                   arrowprops=dict(facecolor='red', shrink=0.05, width=1, alpha=0.7),
+                   fontsize=7, ha='center', 
+                   bbox=dict(boxstyle="round,pad=0.3", facecolor='white', alpha=0.8))
+
+# THEN show the plot
+st.pyplot(fig1)
+
 # MODEL COMPARISON SECTION (NEW)
-# ============================================================================
+
 
 st.subheader("🏆 Model Performance Comparison")
 
