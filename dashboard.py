@@ -79,6 +79,23 @@ ax.legend()
 ax.grid(True, alpha=0.3)
 st.pyplot(fig1)
 
+# EVENTS
+events = {
+    1993: "Hyperinflation\n(45.98%) - Political transition",
+    2008: "Global Financial Crisis\n+ Post-election violence",
+    2011: "High food & fuel prices\n(14.02%)",
+    2017: "Drought & elections\n(8.01%)",
+    2020: "COVID-19 pandemic\n(5.41%)",
+    2022: "Russia-Ukraine war\n(7.66%)",
+}
+
+for year, label in events.items():
+    y_value = df[df['Year'].dt.year == year]['Inflation_Rate'].values
+    if len(y_value) > 0:
+        ax.annotate(label, xy=(year, y_value[0]), 
+                   xytext=(year, y_value[0] + 5),
+                   arrowprops=dict(facecolor='red', shrink=0.05, width=1),
+                   fontsize=8, ha='center')
 # ============================================================================
 # MODEL COMPARISON SECTION (NEW)
 # ============================================================================
