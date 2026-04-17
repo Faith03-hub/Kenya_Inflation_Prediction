@@ -242,7 +242,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-Your Name - njengafaith84@gmail.com
+Faith Njenga - njengafaith84@gmail.com
 
 Project Link: [https://github.com/your-username/kenya_inflation_prediction](https://github.com/Faith03-hub/Kenya_Inflation_Prediction)
 
