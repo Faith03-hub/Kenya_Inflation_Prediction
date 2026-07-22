@@ -4,7 +4,7 @@
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## 📊 Overview
+## Overview
 
 This project provides an interactive dashboard for analyzing and forecasting Kenya's inflation rates using two powerful time series models:
 
@@ -13,45 +13,36 @@ This project provides an interactive dashboard for analyzing and forecasting Ken
 
 The dashboard fetches real-time data from the World Bank API and generates forecasts up to 2029, complete with confidence intervals and model performance comparisons.
 
-## ✨ Features
+##  Features
 
-### 🔍 Data Analysis
+### Data Analysis
 - **Real-time data fetching** from World Bank API (1980-2024)
 - **Interactive visualizations** of historical inflation trends
 - **Key metrics** (average, peak, latest inflation rates)
 - **Annotated charts** highlighting major economic events
 
-### 🤖 Forecasting Models
+###  Forecasting Models
 - **ARIMA Model** - Automatically tuned using AIC criterion
 - **Prophet Model** - Handles trends and seasonality automatically
 - **95% Confidence Intervals** for all predictions
 - **Model comparison** with MAE and RMSE metrics
 
-### 📤 Upload & Custom Data
+###  Upload & Custom Data
 - **Upload your own datasets** (CSV, Excel, KNBS files)
 - **Auto-detection** of year and inflation columns
 - **Support for multiple formats** including World Bank exports
 
-### 📥 Export Capabilities
+###  Export Capabilities
 - **Download forecasts** as CSV files
 - **Export historical data** for further analysis
 
-## 🚀 Live Demo
+##  Live Demo
 
-👉 **[Click here to view the live dashboard]([https://your-app-url.streamlit.app](https://kenyainflationprediction-cije8oocbvz3rnq6otz5ch.streamlit.app/))**
+ **[Click here to view the live dashboard]([https://your-app-url.streamlit.app](https://kenyainflationprediction-cije8oocbvz3rnq6otz5ch.streamlit.app/))**
 
-## 📸 Screenshots
 
-### Main Dashboard
-![Dashboard](screenshots/dashboard.png)
 
-### Forecast Comparison
-![Forecast](screenshots/forecast.png)
-
-### Upload Feature
-![Upload](screenshots/upload.png)
-
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |----------|-------------|
@@ -62,7 +53,7 @@ The dashboard fetches real-time data from the World Bank API and generates forec
 | **Data Source** | World Bank API |
 | **Deployment** | Streamlit Cloud |
 
-## 📁 Project Structure
+## Project Structure
 ```
 kenya_inflation_prediction/
 ├── dashboard.py                 # Main Streamlit application
@@ -80,7 +71,7 @@ kenya_inflation_prediction/
     └── Upload.py               # Data upload page
 ```
 
-## 🔧 Installation
+##  Installation
 
 ### Prerequisites
 - Python 3.9 or higher
@@ -117,7 +108,7 @@ streamlit run dashboard.py
 
 5. Open your browser and navigate to `http://localhost:8501`
 
-## 📦 Dependencies
+##  Dependencies
 
 ```txt
 streamlit>=1.28.0
@@ -134,7 +125,7 @@ pandas-datareader>=0.10.0
 openpyxl>=3.1.0
 ```
 
-## 📊 Model Performance
+##  Model Performance
 
 Based on evaluation on 2020-2024 test data:
 
@@ -145,7 +136,7 @@ Based on evaluation on 2020-2024 test data:
 
 Note: Prophet performed better on Kenya's data due to its ability to handle structural breaks and non-linear trends.
 
-## 🎯 How It Works
+## How It Works
 
 ### Data Pipeline
 1. Data Fetching: Automatically retrieves inflation data from World Bank API
@@ -159,7 +150,7 @@ Note: Prophet performed better on Kenya's data due to its ability to handle stru
 - ARIMA: Best for stationary time series with clear autocorrelation patterns
 - Prophet: Better for data with trend changes and potential structural breaks
 
-## 📈 Sample Forecast Results (2025-2029)
+## Sample Forecast Results (2025-2029)
 
 | Year | ARIMA Forecast | Prophet Forecast | 95% CI Range |
 |------|---------------|------------------|---------------|
@@ -193,14 +184,14 @@ Note: Prophet performed better on Kenya's data due to its ability to handle stru
 - Year column: 'Year', 'year', 'Date', 'date', 'Period', 'period'
 - Inflation column: 'Inflation', 'inflation', 'CPI', 'Rate', 'rate'
 
-## 🔍 Key Findings
+##  Key Findings
 
 1. Kenya's inflation has been volatile, peaking at 45.98% in 1993
 2. Recent years show stabilization (2024: 4.49%)
 3. Prophet model outperforms ARIMA on 2020-2024 test data
 4. Wide confidence intervals indicate significant uncertainty in long-term forecasts
 
-## 🚧 Troubleshooting
+##  Troubleshooting
 
 ### Common Issues
 
@@ -219,7 +210,7 @@ If deploying to Streamlit Cloud:
 3. Use relative imports for src modules
 4. Set python_version: "3.9" in .streamlit/config.toml
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please follow these steps:
 
@@ -229,31 +220,31 @@ Contributions are welcome! Please follow these steps:
 4. Push to branch (git push origin feature/AmazingFeature)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - World Bank for providing open data via API
 - Facebook Prophet team for the forecasting library
 - Statsmodels for ARIMA implementation
 - Streamlit for the amazing dashboard framework
 
-## 📧 Contact
+##  Contact
 
 Faith Njenga - njengafaith84@gmail.com
 
 Project Link: [https://github.com/your-username/kenya_inflation_prediction](https://github.com/Faith03-hub/Kenya_Inflation_Prediction)
 
-## 📊 Data Source
+##  Data Source
 
 - Primary Source: World Bank API - Consumer Price Index (FP.CPI.TOTL.ZG)
 - Coverage: 1980 - 2024
 - Frequency: Annual
 - Last Updated: 2024
 
-## 🎯 Future Improvements
+##  Future Improvements
 
 - [ ] Add more forecasting models (LSTM, XGBoost)
 - [ ] Include economic indicators (GDP, interest rates)
@@ -264,7 +255,7 @@ Project Link: [https://github.com/your-username/kenya_inflation_prediction](http
 
 ---
 
-## ⭐ Star the Project
+##  Star the Project
 
 If you find this project useful, please give it a star on GitHub! It helps others discover the project.
 
